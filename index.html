@@ -17,43 +17,124 @@
 <body>
     <header>
         <nav>
-            <div>
-                <img src="imagenes/logo.png">
-            </div>
-
-            <div>
-                <ul>
-                    <li>Inicio</li>
-                    <li>Calcula tu préstamo</li>
-                    <li>Por qué elegirnos</li>
-                    <li>Testimoniales</li>
-                </ul>
+            <div class="header-layout">
+                <div class="header-item--logo">
+                    <img src="imagenes/logo.png">
+                 </div>
+                <div class="header-item--navigation">
+                    <ul class="site-nav">
+                        <li class="site-nav__item">Inicio</li>
+                        <li class="site-nav__item">Calcula tu préstamo</li>
+                        <li class="site-nav__item">Por qué elegirnos</li>
+                        <li class="site-nav__item">Testimoniales</li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     
     <main>
-        <section>
-            <!-- img -->
+        <section class="hero-section">
             <div>
+                <h1>Swift significa rápido y seguro.</h1>
+                <h2>Tu préstamo online, en un click.</h2>    
                 <img src="imagenes/hero.png" alt="Finanzas, Banco, Bancario, Negocio">
+            </div>
+        </section>
+
+        <section class="second-section">
+            <div>
+                <img src="imagenes/SwiftBank_icons_profile.png" alt="">
+                <p>Introduce tus datos en el formulario para que podamos analizar tu perfil.</p>
+            </div>
+
+            <div>
+                <img src="imagenes/SwiftBank_icons_fast.png" alt="">
+                <p>Nuestro sistema evalúa tu perfil y calcula los resultados de forma rápida y eficaz.</p>
+            </div>
+
+            <div>
+                <img src="imagenes/SwiftBank_icons_secure.png" alt="">
+                <p>En 5 segundos, obtienes las mejores opciones adaptadas a tus necesidades.</p>
+            </div>
+        </section>
+
+        <section class="loan-section">
+            <div>
+                <h3>Calcula tu préstamo</h3>  
+                <div>
+                    <form>
+                        <div>
+                            <input type="text" id="Name" name="Name" placeholder="Nombres"/>
+                        </div>
+                        <div>
+                            <input type="text" id="Surname" name="Surname" placeholder="Apellidos"/>
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="email" placeholder="Correo electrónico"/>
+                        </div>
+                        <div>
+                            <button type="button">CALCULAR PRÉSTAMO</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="figures-section">
+            <div>
+                <h3>SwiftBank en cifras</h3>
+            </div>
+            <div>
+                <p>Más de</p>
+                <p>63000</p>
+                <p>préstamos otorgados</p>
+            </div>
+            <div>
+                <p>El</p>
+                <p>95%</p>
+                <p>de los usuarios nos vuelven a elegir</p>
+            </div>
+            <div>
+                <p>Contamos con</p>
+                <p>27</p>
+                <p>bancos y financieras adheridos</p>
+            </div>
+        </section>
+
+        <section class="mobile-section">
+            <div>
+                <img src="imagenes/SwiftBank_mobile.png">
+            </div>
+            <div>
+                <div>
+                    <img src="imagenes/Rápido.png">
+                    <p>Las cosas de palacio van despacio. Las nuestras no.Olvida los formularios, las gestorías y los trámites.</p>
+                </div>
+                <div>
+                    <img src="imagenes/Seguro.png">
+                    <p>Tus datos están a salvo con nosotros.Rellena nuestro formulario con toda tranquilidad.</p>
+                </div>
+                <div>
+                    <img src="imagenes/Online.png">
+                    <p>Puedes calcular tu préstamo desde cualquier dispositivo y desde cualquier lugar.</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <img src="imagenes/SwiftBank_logo_footer.png">
         </div>
-
         <div>
-            <span></span>
+            <img src="imagenes/instagram-svgrepo-com.png">
+            <img src="imagenes/facebook-svgrepo-com.png">
+            <img src="imagenes/linkedin-svgrepo-com.png">
         </div>
-
+        <div>
+            <span>2024 SwiftBank® | Todos los derechos reservados | Barcelona, España</span>
+        </div>
     </footer>
 </body>
 </html>
