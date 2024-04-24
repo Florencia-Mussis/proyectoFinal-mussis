@@ -97,10 +97,22 @@
                         <input type="text" id="Surname" name="Surname" placeholder="Apellidos"/>
                     </div>
                     <div>
-                        <input type="email" id="email" name="email" placeholder="Correo electrónico"/>
+                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required/>
+                    </div>
+                    <div class="ranges">
+                        <div class="input-range">
+                            <label for="amount">¿Cuánto dinero necesitas?</label>
+                            <input type="range" data-type="currency" value="0" min="6000" max="100000" id="amount" name="amount" oninput="this.nextElementSibling.value = this.value">
+                            <input class="select-value"></input>
+                        </div>
+                        <div class="input-range">
+                            <label for="months">¿En cuántos meses quieres devolverlo?</label>
+                            <input type="range" value="0" min="12" max="84" id="months" name="months" oninput="this.nextElementSibling.value = this.value">
+                            <input class="select-value"></input>
+                        </div>
                     </div>
                     <div>
-                        <button type="button">CALCULAR PRÉSTAMO</button>
+                        <button type="submit">CALCULAR PRÉSTAMO</button>
                     </div>
                 </form>
             </div>
@@ -136,15 +148,15 @@
                 <img src="assets/imagenes/SwiftBank_mobile.png">
             </div>
             <div class="mobile-section__content">
-                <div>
+                <div class="mobile-section__adjectives">
                     <span>Rápido</span>
-                    <p>Las cosas de palacio van despacio. Las nuestras no.Olvida los formularios, las gestorías y los trámites.</p>
+                    <p>Las cosas de palacio van despacio. Las nuestras no. Olvida los formularios, las gestorías y los trámites.</p>
                 </div>
-                <div>
+                <div class="mobile-section__adjectives">
                     <span>Seguro</span>
-                    <p>Tus datos están a salvo con nosotros.Rellena nuestro formulario con toda tranquilidad.</p>
+                    <p>Tus datos están a salvo con nosotros. Rellena nuestro formulario con toda tranquilidad.</p>
                 </div>
-                <div>
+                <div class="mobile-section__adjectives">
                     <span>Online</span>
                     <p>Puedes calcular tu préstamo desde cualquier dispositivo y desde cualquier lugar.</p>
                 </div>
