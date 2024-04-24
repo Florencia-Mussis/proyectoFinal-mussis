@@ -1,55 +1,553 @@
 /* =================================================================================================================================
 STYLES
 ================================================================================================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,800&display=swap');
+/* Globals */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.fira-sans-light {
-    font-family: "Fira Sans", sans-serif;
+/* Fonts */
+@font-face {
+    font-family: Fira Sans;
     font-weight: 300;
-    font-style: normal;
+    src: url("../assets/fonts/FiraSans-Light.ttf");
 }
-  
-.fira-sans-regular {
-    font-family: "Fira Sans", sans-serif;
+
+@font-face {
+    font-family: Fira Sans;
     font-weight: 400;
-    font-style: normal;
+    src: url("../assets/fonts/FiraSans-Regular.ttf");
 }
 
-.fira-sans-medium {
-    font-family: "Fira Sans", sans-serif;
+@font-face {
+    font-family: Fira Sans;
     font-weight: 500;
-    font-style: normal;
+    src: url("../assets/fonts/FiraSans-Medium.ttf");
 }
 
-.fira-sans-extrabold-italic {
-    font-family: "Fira Sans", sans-serif;
+@font-face {
+    font-family: Fira Sans;
     font-weight: 800;
-    font-style: italic;
+    src: url("../assets/fonts/FiraSans-ExtraBoldItalic.ttf");
 }
 
 /* =================================================================================================================================
 HEADER
 ================================================================================================================================= */
 /* Navbar */
+.page-width {
+   margin: 0px 100px;
+}
 
 .header-layout {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    padding: 13px 0px;
 }
 
 .header-item--logo {
    width: 100%;
-   text-align: center;
+   text-align: left;
 }
 
-.header-item--logo img{
+.header-item--logo img {
     width: 137px;
     height: 34px;
     max-width: 100%;
 }
 
-.site-nav {
+.topnav {
     display: flex;
-    list-style-type: none;
-    justify-content: space-evenly;
+    justify-content: end;
+    align-items: center;
 }
+
+#myLinks {
+    width: 100%;
+} 
+
+#myLinks ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    gap:60px;
+} 
+
+#myLinks a {
+    font-family:  Fira Sans;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #0A2864;
+    margin-bottom: 0px;
+    text-decoration: none;
+}
+
+.header-logo-icon .icon {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .page-width {
+        margin: 0px;
+    }
+
+    .header-logo-icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-logo-icon .icon {
+        display: block;
+        color: #0A2864;
+    }
+
+    .header-layout {
+        display: block;
+    }
+
+    .topnav {
+        display: block;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .page-width {
+        margin: 0px 30px;
+    }
+
+    #myLinks ul {
+        display: block;
+    } 
+
+    #myLinks ul li {
+        display: block;
+    } 
+
+    #myLinks ul li a {
+        margin: 50px 0px;
+        font-size: 16px;
+    }
+}
+
+/* =================================================================================================================================
+HERO SECTION
+================================================================================================================================= */
+.hero-section {
+    position: relative;
+    height: 60vh;
+}
+
+.hero-section-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section__img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-section__text {
+    position: relative;
+} 
+
+.hero-section__text h1 span {
+    font-family: Fira Sans;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 72px;
+    text-align: center;
+
+} 
+
+.hero-section__text h1 {
+    font-family:  Fira Sans;
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 72px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 13px;
+}    
+
+.hero-section__text h2 {
+    font-family: Fira Sans;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 43.2px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-section-container {
+       padding: 155px 56px;
+    }
+
+    .hero-section__text h1 {
+        margin-bottom: 30px;
+    }
+
+    .hero-section__text h2 {
+        font-size: 30px;
+    }
+}
+
+/* =================================================================================================================================
+SECOND SECTION
+================================================================================================================================= */
+.second-section {
+    background: linear-gradient(180deg, #C9E8FF 0%, #FFFFFF 100%); 
+    padding: 100px 0px;
+}
+
+.second-section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.second-section-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.second-section-group img {
+    max-width: 76px;
+    max-height: 76px;
+}
+
+.second-section-group p {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #0A2864;
+}
+
+@media only screen and (max-width: 768px) {
+    .second-section {
+        padding: 70px 85px;
+    }
+
+    .second-section-content {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}    
+
+/* =================================================================================================================================
+LOAD SECTION
+================================================================================================================================= */
+.load-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 100px 0px 200px 0px;
+}
+
+.load-section h3 span {
+    font-family: Fira Sans;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 72px;
+    text-align: center;
+    color: #0A2864;
+}
+
+.load-section h3 {
+    font-family: Fira Sans;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72px;
+    text-align: center;
+    color: #0A2864;
+}
+
+.load-section-container form button {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: center;
+    padding: 12px 188px;
+    color: #FFFFFF;
+    background-color: #0071BC;
+    border-radius: 6px;
+    border-color: #0071BC;
+}
+
+.load-section-container form input {
+    border: 1px solid #0071BC;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 150px 12px 12px;
+    text-align: left;
+    border-radius: 6px;
+}
+
+.load-section-container form input::placeholder {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    color: #43ACF8;
+}
+
+@media only screen and (max-width: 768px) {
+    .load-section-container {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .load-section h3 {
+        font-size: 40px;
+        line-height: normal;
+    }
+
+    .load-section h3 span {
+        font-size: 40px;
+        line-height: normal;
+    }
+
+    .load-section-container {
+        gap: 40px;
+    }
+
+    .load-section-container h3 {
+        margin: 0px 85px;
+    }
+
+    .load-section-container form button {
+        padding: 12px 83px;
+    }
+}  
+
+/* =================================================================================================================================
+FIGURES SECTION
+================================================================================================================================= */
+.figures-section {
+    background:linear-gradient(99.85deg, #0A2864 0%, #0071BC 100%);
+}
+
+.figures-section h3 span {
+    font-family: Fira Sans;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 72px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.figures-section h3 {
+    font-family: Fira Sans;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72px;
+    text-align: center;    
+    color: #FFFFFF;
+}
+
+.figures-section-container {
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+
+.figures-section__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 200px;
+    color: #FFFFFF;
+}
+
+.figures-section__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.figures-section__info span {
+    font-family: Fira Sans;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 72px;
+    text-align: center;
+}
+
+.figures-section__info p {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .figures-section {
+        margin-top: 70px;
+    }
+
+    .figures-section-container {
+        padding: 70px 86px;
+        gap: 70px;
+    }
+
+    .figures-section h3 {
+        font-size: 40px;
+        line-height: normal;
+    }    
+
+    .figures-section h3 span {
+        font-size: 40px;
+        line-height: normal;
+    }  
+
+    .figures-section__content {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+}
+
+/* =================================================================================================================================
+MOBILE SECTION
+================================================================================================================================= */
+.mobile-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 200px;
+    margin: 100px 212px;
+}
+
+.mobile-section__img img {
+    max-width: 431px;
+}
+
+.mobile-section__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+}
+
+.mobile-section__content span {
+    font-family: Fira Sans;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 72px;
+    text-align: left;
+    background: -webkit-linear-gradient(86.81deg, #0071BC 1.17%, #3FA9F5 89.88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mobile-section__content p {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color:#0A2864;
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-section {
+        display: flex;
+        flex-direction: column;
+        margin: 70px 30px;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .mobile-section__img img {
+        width: 100%;
+    }
+
+    .mobile-section__content span {
+        font-size: 40px;
+        line-height: 48px;
+    }    
+
+    .mobile-section__content p {
+        font-size: 14px;
+        line-height: 20px;
+    }  
+}
+
+@media only screen and (max-width: 1024px) {
+    .mobile-section {
+        grid-gap: 50px;
+        margin: 100px 100px;
+    }
+}    
+
+/* =================================================================================================================================
+FOOTER
+================================================================================================================================= */
+.footer-container {
+    background: linear-gradient(87.77deg, #0071BC 0%, #3FA9F5 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 40px 0px;
+}
+
+.footer-logo img {
+    max-width: 169px;
+}
+
+.footer-social-media {
+   display: flex;
+   gap: 36px;
+}
+
+.footer-social-media img {
+    width: 30px;
+}
+
+.footer-coopyright p {
+    font-family: Fira Sans;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        margin-top: 140px;
+        gap: 40px;
+    }
+}    
