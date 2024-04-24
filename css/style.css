@@ -167,8 +167,6 @@ HERO SECTION
     font-style: italic;
     font-weight: 800;
     line-height: 72px;
-    text-align: center;
-
 } 
 
 .hero-section__text h1 {
@@ -176,9 +174,9 @@ HERO SECTION
     font-size: 60px;
     font-weight: 300;
     line-height: 72px;
-    text-align: center;
     color: #FFFFFF;
     margin-bottom: 13px;
+    text-align: center;
 }    
 
 .hero-section__text h2 {
@@ -209,14 +207,13 @@ SECOND SECTION
 ================================================================================================================================= */
 .second-section {
     background: linear-gradient(180deg, #C9E8FF 0%, #FFFFFF 100%); 
-    padding: 100px 0px;
+    padding: 100px 190px;
 }
 
 .second-section-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    gap: 200px;
 }
 
 .second-section-group {
@@ -296,6 +293,30 @@ LOAD SECTION
     background-color: #0071BC;
     border-radius: 6px;
     border-color: #0071BC;
+}   
+
+.load-section-container form .input-range .select-value {
+   font-size: 32px;
+}   
+
+.load-section-container form .input-range label {
+    font-family: Fira Sans;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: center;
+    color: #43ACF8;
+}
+
+.load-section-container form .input-range input {
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px !important;
+    text-align: center;
+}
+
+.load-section-container form input:focus-visible {
+    outline: #0071BC auto 1px;
 }
 
 .load-section-container form input {
@@ -305,7 +326,21 @@ LOAD SECTION
     padding: 12px 150px 12px 12px;
     text-align: left;
     border-radius: 6px;
+    color: #0A2864;
 }
+
+.load-section-container .ranges {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin: 30px 0px;
+}
+
+.load-section-container form .input-range {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
 
 .load-section-container form input::placeholder {
     font-family: Fira Sans;
@@ -317,8 +352,7 @@ LOAD SECTION
 
 @media only screen and (max-width: 768px) {
     .load-section-container {
-        padding-top: 70px;
-        padding-bottom: 70px;
+       padding: 70px 35px;
     }
 
     .load-section h3 {
@@ -335,13 +369,14 @@ LOAD SECTION
         gap: 40px;
     }
 
-    .load-section-container h3 {
-        margin: 0px 85px;
+    .load-section-container form button {
+        padding: 12px 81px;
+        width: 100%;
     }
 
-    .load-section-container form button {
-        padding: 12px 83px;
-    }
+    .load-section-container form .input-range label {
+        font-size: 18px;
+    }    
 }  
 
 /* =================================================================================================================================
@@ -371,7 +406,7 @@ FIGURES SECTION
 }
 
 .figures-section-container {
-    padding: 100px 0px;
+    padding: 100px 232px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -384,6 +419,12 @@ FIGURES SECTION
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 200px;
     color: #FFFFFF;
+}
+
+.mobile-section__adjectives {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .figures-section__info {
@@ -503,7 +544,7 @@ MOBILE SECTION
     }  
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     .mobile-section {
         grid-gap: 50px;
         margin: 100px 100px;
@@ -542,7 +583,6 @@ FOOTER
     font-size: 10px;
     line-height: 12px;
     color: #FFFFFF;
-    text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
