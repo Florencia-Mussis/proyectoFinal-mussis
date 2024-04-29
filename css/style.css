@@ -72,6 +72,10 @@ nav {
     max-width: 100%;
 }
 
+.header-item--logo .close {
+  display: none;
+}
+
 .topnav {
     display: flex;
     justify-content: end;
@@ -99,7 +103,7 @@ nav {
     text-decoration: none;
 }
 
-.header-logo-icon .icon {
+.header-logo-icon .hamburger-icon {
     display: none;
 }
 
@@ -114,7 +118,7 @@ nav {
         align-items: center;
     }
 
-    .header-logo-icon .icon {
+    .header-logo-icon .hamburger-icon {
         display: block;
         color: #0A2864;
     }
@@ -147,6 +151,11 @@ nav {
         margin: 50px 0px;
         font-size: 16px;
     }
+
+    #myLinks .last-nav-item {
+        margin-bottom: 300px;
+    }
+
 }
 
 /* =================================================================================================================================
@@ -313,6 +322,7 @@ LOAD SECTION
 
 .load-section-container form .input-range .select-value {
    font-size: 32px;
+   border: none;
 }   
 
 .load-section-container form .input-range label {
@@ -322,6 +332,7 @@ LOAD SECTION
     line-height: 19.2px;
     text-align: center;
     color: #43ACF8;
+    margin-bottom: 10px;
 }
 
 .load-section-container form .input-range input {
@@ -329,6 +340,7 @@ LOAD SECTION
     margin-top: 10px;
     margin-bottom: 0px !important;
     text-align: center;
+    width: 80%;
 }
 
 .load-section-container form input:focus-visible {

@@ -27,9 +27,14 @@
                             <img src="assets/imagenes/logo.png">
                         </a>
                     </div>
+                    <div class="header-item--logo">
+                        <a href="#home" class="close" onclick="endNavbar();">
+                            <img src="assets/imagenes/close-menu.svg">
+                        </a>
+                    </div>
                     <div>
                         <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction(); closeMenu();">
                             <i class="fa fa-bars"></i>
                         </a>
                     </div>  
@@ -45,7 +50,7 @@
                                 <a class="nav-item" aria-current="" href="#calculator">Calcula tu préstamo</a>
                             </li>
                             <li>
-                                <a class="nav-item" aria-current="" href="#choose-us">Por qué elegirnos</a>
+                                <a class="nav-item last-nav-item" aria-current="" href="#choose-us">Por qué elegirnos</a>
                             </li>
                         </ul>
                     </div>
@@ -103,12 +108,12 @@
                         <div class="input-range">
                             <label for="amount">¿Cuánto dinero necesitas?</label>
                             <input type="range" data-type="currency" value="0" min="6000" max="100000" id="amount" name="amount" oninput="this.nextElementSibling.value = this.value">
-                            <input class="select-value"></input>
+                            <input class="select-value" value="6000"></input>
                         </div>
                         <div class="input-range">
                             <label for="months">¿En cuántos meses quieres devolverlo?</label>
                             <input type="range" value="0" min="12" max="84" id="months" name="months" oninput="this.nextElementSibling.value = this.value">
-                            <input class="select-value"></input>
+                            <input class="select-value" value="12"></input>
                         </div>
                     </div>
                     <div>
