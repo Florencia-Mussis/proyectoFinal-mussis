@@ -41,48 +41,21 @@ html {
 HEADER
 ================================================================================================================================= */
 /* Navbar */
-#toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: red;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-#toggle::before {
-    content: "";
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    background: #FFFFFF;
-
-}
-
-
-/*---------------------------------------- */
 nav {
+    background-color: #FFFFFF;
     position: fixed;
-    top: 0;
-    left :0;
-    right: 0;
-    padding:0px; 
     z-index: 1;
-    background: #FFFFFF;
-} 
+    width: 100%;
+}
 
 .page-width {
-   margin: 0px 100px;
+    margin: 0px 100px;
 }
 
 .header-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 13px 0px;
 }
 
@@ -93,28 +66,14 @@ nav {
     text-align: left;
 }
 
-.header-item--icon .close {
-  display: none;
-}
-
-.topnav {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-
-#myLinks {
-    width: 100%;
-} 
-
-#myLinks ul {
+#sidebar ul {
     list-style-type: none;
     display: flex;
     justify-content: end;
     gap:60px;
-} 
+}
 
-#myLinks a {
+#sidebar ul li a {
     font-family:  Fira Sans;
     font-size: 12px;
     font-weight: 500;
@@ -124,12 +83,112 @@ nav {
     text-decoration: none;
 }
 
-.header-logo-icon .hamburger-icon {
-    display: none;
-}
-
 @media only screen and (max-width: 768px) {
     .page-width {
+        margin: 0px 30px;
+    }
+
+    #toggle {
+        top: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+    #toggle::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background: #0A2864;
+        transform: translateY(-5px);
+        transition: 0.2s;
+    }
+
+    #toggle::after {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background: #0A2864;
+        transform: translateY(5px);
+        transition: 0.2s;
+    }
+
+    #toggle.active::before {
+        transform: translateY(0px) rotate(45deg);
+        background: #FFFFFF;
+    }
+
+    #toggle.active::after {
+        transform: translateY(0px) rotate(-45deg);
+        background: #FFFFFF;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(121.68deg, #0A2864 11.89%, #0071BC 82.08%);
+        transition: 0.5s;
+        z-index: 1;
+    }
+
+    #sidebar.active {
+        left: 0px;
+    }
+
+    #sidebar ul {
+        display: block;
+        position: relative;
+        margin-top: 80px;
+    }
+
+    #sidebar ul li {
+        list-style: none;
+        display: inline-block;
+        width: 100%;
+        padding: 10px 40px;
+        margin-bottom: 50px;
+    }
+
+    #sidebar ul li:hover {
+        background: rgb(0, 102, 180);
+    } 
+
+    #sidebar ul li a {
+        font-family:  Fira Sans;
+        font-weight: 500;
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 26px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+
+/*---------------------------------------- */
+/* nav {
+    position: fixed;
+    top: 0;
+    left :0;
+    right: 0;
+    padding:0px; 
+    z-index: 1;
+    background: #FFFFFF;
+} 
+
+
+
+
+    /* .page-width {
         margin: 0px;
     }
 
@@ -171,9 +230,9 @@ nav {
 
     #myLinks .last-nav-item {
         margin-bottom: 300px;
-    }
+    } */
 
-}
+
 
 /* =================================================================================================================================
 HERO SECTION
@@ -181,7 +240,7 @@ HERO SECTION
 .hero-section {
     position: relative;
     height: 60vh;
-    margin-top: 60px;
+    padding-top: 70px;
 }
 
 .hero-section-container {
@@ -232,11 +291,11 @@ HERO SECTION
 @media only screen and (max-width: 768px) {
     .hero-section-container {
        padding: 155px 56px;
-       margin-top: 20px;
     }
 
     .hero-section__text h1 {
         margin-bottom: 30px;
+        margin-top: 60px;
     }
 
     .hero-section__text h2 {
@@ -249,7 +308,7 @@ SECOND SECTION
 ================================================================================================================================= */
 .second-section {
     background: linear-gradient(180deg, #C9E8FF 0%, #FFFFFF 100%); 
-    padding: 100px 190px;
+    padding: 170px 190px 100px 190px;
 }
 
 .second-section-content {
@@ -281,7 +340,7 @@ SECOND SECTION
 
 @media only screen and (max-width: 768px) {
     .second-section {
-        padding: 70px 85px;
+        padding: 170px 85px 70px 85px;
     }
 
     .second-section-content {
@@ -293,6 +352,15 @@ SECOND SECTION
     }
 }    
 
+@media only screen and (min-width: 769px) and (max-width: 1240px) {
+    .second-section {
+        padding: 170px 65px 70px 65px;
+    }
+
+    .second-section-content {
+        gap: 50px;
+    }
+}
 /* =================================================================================================================================
 LOAD SECTION
 ================================================================================================================================= */
@@ -396,6 +464,10 @@ LOAD SECTION
 }
 
 @media only screen and (max-width: 768px) {
+    .load-section {
+        scroll-margin-top: 60px;
+    }
+
     .load-section-container {
        padding: 70px 35px;
     }
@@ -496,7 +568,7 @@ FIGURES SECTION
     text-align: center;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) { 
     .figures-section {
         margin-top: 70px;
     }
@@ -522,6 +594,8 @@ FIGURES SECTION
         gap: 70px;
     }
 }
+
+
 
 /* =================================================================================================================================
 MOBILE SECTION
@@ -565,7 +639,18 @@ MOBILE SECTION
     color:#0A2864;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1240px) {
+    .mobile-section {
+        grid-gap: 50px;
+        margin: 100px 100px;
+    }
+}  
+
+@media only screen and (max-width: 1240px) {
+    .mobile-section {
+        scroll-margin-top: 90px;
+    }
+
     .mobile-section {
         display: flex;
         flex-direction: column;
@@ -588,14 +673,7 @@ MOBILE SECTION
         font-size: 14px;
         line-height: 20px;
     }  
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .mobile-section {
-        grid-gap: 50px;
-        margin: 100px 100px;
-    }
-}    
+}  
 
 /* =================================================================================================================================
 FOOTER
