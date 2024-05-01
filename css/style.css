@@ -41,6 +41,31 @@ html {
 HEADER
 ================================================================================================================================= */
 /* Navbar */
+#toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#toggle::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: #FFFFFF;
+
+}
+
+
+/*---------------------------------------- */
 nav {
     position: fixed;
     top: 0;
@@ -61,18 +86,14 @@ nav {
     padding: 13px 0px;
 }
 
-.header-item--logo {
-   width: 100%;
-   text-align: left;
-}
-
-.header-item--logo img {
-    width: 137px;
+.header-item img {
+    width: auto;
     height: 34px;
     max-width: 100%;
+    text-align: left;
 }
 
-.header-item--logo .close {
+.header-item--icon .close {
   display: none;
 }
 
@@ -118,10 +139,6 @@ nav {
         align-items: center;
     }
 
-    .header-logo-icon .hamburger-icon {
-        display: block;
-        color: #0A2864;
-    }
 
     .header-layout {
         display: block;

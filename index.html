@@ -14,34 +14,22 @@
     <script src="js/script.js" defer></script>
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/imagenes/favicon.png" type="image/x-icon">
-    <!-- hamburger icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header id="home">
         <nav>
             <div class="page-width header-layout">
                 <div class="header-logo-icon">
-                    <div class="header-item--logo">
+                    <div class="header-item">
                         <a href="#home" class="active">
                             <img src="assets/imagenes/logo.png">
                         </a>
                     </div>
-                    <div class="header-item--logo">
-                        <a href="#home" class="close" onclick="endNavbar();">
-                            <img src="assets/imagenes/close-menu.svg">
-                        </a>
-                    </div>
-                    <div>
-                        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                        <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction(); closeMenu();">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>  
                 </div>
-    
+                
+                <div id="toggle"></div>
                 <div class="topnav">
-                    <div id="myLinks">
+                    <div id="sidebar" id="myLinks">
                         <ul>
                             <li>
                                 <a class="nav-item" aria-current="" href="#home">Inicio</a>
