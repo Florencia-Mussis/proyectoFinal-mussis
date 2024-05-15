@@ -174,66 +174,6 @@ nav {
     }
 }
 
-/*---------------------------------------- */
-/* nav {
-    position: fixed;
-    top: 0;
-    left :0;
-    right: 0;
-    padding:0px; 
-    z-index: 1;
-    background: #FFFFFF;
-} 
-
-
-
-
-    /* .page-width {
-        margin: 0px;
-    }
-
-    .header-logo-icon {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-
-    .header-layout {
-        display: block;
-    }
-
-    .topnav {
-        display: block;
-    }
-
-    .nav-item {
-        display: none;
-    }
-
-    .page-width {
-        margin: 0px 30px;
-    }
-
-    #myLinks ul {
-        display: block;
-    } 
-
-    #myLinks ul li {
-        display: block;
-    } 
-
-    #myLinks ul li a {
-        margin: 50px 0px;
-        font-size: 16px;
-    }
-
-    #myLinks .last-nav-item {
-        margin-bottom: 300px;
-    } */
-
-
-
 /* =================================================================================================================================
 HERO SECTION
 ================================================================================================================================= */
@@ -594,8 +534,6 @@ FIGURES SECTION
         gap: 70px;
     }
 }
-
-
 
 /* =================================================================================================================================
 MOBILE SECTION

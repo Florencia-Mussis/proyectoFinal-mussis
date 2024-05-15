@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +12,10 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- js -->
     <script src="js/main.js" defer></script>
-    <script src="js/script.js" defer></script>
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/imagenes/favicon.png" type="image/x-icon">
 </head>
+
 <body>
     <header id="home">
         <nav>
@@ -26,7 +27,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div id="toggle"></div>
 
                 <div id="sidebar">
@@ -42,11 +43,11 @@
                         </li>
                     </ul>
                 </div>
-                
+
             </div>
         </nav>
     </header>
-    
+
     <main>
         <section class="hero-section">
             <div class="hero-section__img">
@@ -55,7 +56,7 @@
             <div class="hero-section-container">
                 <div class="hero-section__text">
                     <h1><span>Swift</span> significa rápido y seguro.</h1>
-                    <h2>Tu préstamo online, en un click.</h2> 
+                    <h2>Tu préstamo online, en un click.</h2>
                 </div>
             </div>
         </section>
@@ -77,35 +78,37 @@
                     <p>En 5 segundos, obtienes las </br>mejores opciones adaptadas </br>a tus necesidades.</p>
                 </div>
             </div>
-        </section> 
+        </section>
 
         <section id="calculator" class="load-section">
             <div class="load-section-container">
-                <h3><span>Calcula</span> tu préstamo</h3>  
+                <h3><span>Calcula</span> tu préstamo</h3>
                 <form>
                     <div>
-                        <input type="text" id="Name" name="Name" placeholder="Nombres"/>
+                        <input type="text" id="Name" name="Name" placeholder="Nombres" />
                     </div>
                     <div>
-                        <input type="text" id="Surname" name="Surname" placeholder="Apellidos"/>
+                        <input type="text" id="Surname" name="Surname" placeholder="Apellidos" />
                     </div>
                     <div>
-                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required/>
+                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
                     </div>
                     <div class="ranges">
                         <div class="input-range">
                             <label for="amount">¿Cuánto dinero necesitas?</label>
-                            <input type="range" data-type="currency" value="0" min="6000" max="100000" id="amount" name="amount" oninput="this.nextElementSibling.value = this.value">
-                            <input class="select-value" value="6000"></input>
+                            <input type="range" data-type="currency" min="6000" max="100000" step="1000" name="amount"
+                                oninput="this.nextElementSibling.value = '€ ' +  this.value">
+                            <input id="amount" placeholder="€ 6000" class="select-value" disabled></input>
                         </div>
                         <div class="input-range">
                             <label for="months">¿En cuántos meses quieres devolverlo?</label>
-                            <input type="range" value="0" min="12" max="84" id="months" name="months" oninput="this.nextElementSibling.value = this.value">
-                            <input class="select-value" value="12"></input>
+                            <input type="range" min="12" max="84" step="6" name="months"
+                                oninput="this.nextElementSibling.value = this.value">
+                            <input id="months" placeholder="12" class="select-value" disabled></input>
                         </div>
                     </div>
                     <div>
-                        <button type="submit">CALCULAR PRÉSTAMO</button>
+                        <button type="button" onclick="validarDatos()">CALCULAR PRÉSTAMO</button>
                     </div>
                 </form>
             </div>
@@ -143,7 +146,8 @@
             <div class="mobile-section__content">
                 <div class="mobile-section__adjectives">
                     <span>Rápido</span>
-                    <p>Las cosas de palacio van despacio. Las nuestras no. Olvida los formularios, las gestorías y los trámites.</p>
+                    <p>Las cosas de palacio van despacio. Las nuestras no. Olvida los formularios, las gestorías y los
+                        trámites.</p>
                 </div>
                 <div class="mobile-section__adjectives">
                     <span>Seguro</span>
@@ -173,4 +177,5 @@
         </div>
     </footer>
 </body>
+
 </html>
