@@ -301,6 +301,7 @@ SECOND SECTION
         gap: 50px;
     }
 }
+
 /* =================================================================================================================================
 LOAD SECTION
 ================================================================================================================================= */
@@ -309,7 +310,7 @@ LOAD SECTION
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 50px;
     padding: 120px 0px 200px 0px;
 }
 
@@ -343,6 +344,7 @@ LOAD SECTION
     background-color: #0071BC;
     border-radius: 6px;
     border-color: #0071BC;
+    cursor: pointer;
 }   
 
 .load-section-container form .input-range .select-value {
@@ -366,6 +368,7 @@ LOAD SECTION
     margin-bottom: 0px !important;
     text-align: center;
     width: 80%;
+    cursor: pointer;
 }
 
 .load-section-container form input:focus-visible {
@@ -401,6 +404,45 @@ LOAD SECTION
     font-weight: 400;
     line-height: 19.2px;
     color: #43ACF8;
+}
+
+#resultado {
+    font-family: Fira Sans;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: #0A2864;
+}
+
+#resultado span {
+    font-family: Fira Sans;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+    color: #0A2864;
+}
+
+#error {
+    color: red;
+    font-size: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.ultimo-calculo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#verUltimoCalculo {
+    font-family: Fira Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.2px;
+    color: #0071BC;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
