@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "author": "Carlos Pérez",
+    "occupation": "Tecnico legal",
+    "message": "¡Excelente servicio! Rápido y confiable. Obtener mi préstamo fue muy sencillo.",
+    "rating": 5
+  },
+  {
+    "id": "2",
+    "author": "María González",
+    "occupation": "Empresaria",
+    "message": "Swift Bank me ayudó a expandir mi negocio con un préstamo adecuado a mis necesidades. ¡Altamente recomendado!",
+    "rating": 4.5
+  },
+  {
+    "id": "3",
+    "author": "Rafael López",
+    "occupation": "Freelancer",
+    "message": "Gracias a Swift Bank pude financiar mi proyecto personal de manera eficiente. Lo recomiendo ampliamente.",
+    "rating": 4
+  },
+  {
+    "id": "4",
+    "author": "Ana Martínez",
+    "occupation": "Doctora",
+    "message": "El proceso fue muy sencillo y el personal de Swift Bank siempre estuvo dispuesto a ayudarme.",
+    "rating": 5
+  }
+]
+
+  

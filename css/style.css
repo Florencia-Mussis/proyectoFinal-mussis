@@ -229,6 +229,10 @@ HERO SECTION
 }
 
 @media only screen and (max-width: 768px) {
+    .hero-section {
+        height: 90vh;
+    }
+
     .hero-section-container {
        padding: 155px 56px;
     }
@@ -310,8 +314,8 @@ LOAD SECTION
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    padding: 120px 0px 200px 0px;
+    gap: 30px;
+    padding: 100px 0px 200px 0px;
 }
 
 .load-section h3 span {
@@ -333,13 +337,17 @@ LOAD SECTION
     color: #0A2864;
 }
 
+div:has(button#button-calculate) {
+    text-align: center;
+}
+
 .load-section-container form button {
     font-family: Fira Sans;
     font-size: 16px;
     font-weight: 500;
     line-height: 19.2px;
     text-align: center;
-    padding: 12px 188px;
+    padding: 12px 100px;
     color: #FFFFFF;
     background-color: #0071BC;
     border-radius: 6px;
@@ -369,6 +377,7 @@ LOAD SECTION
     text-align: center;
     width: 80%;
     cursor: pointer;
+    accent-color: #0071BC;
 }
 
 .load-section-container form input:focus-visible {
@@ -406,7 +415,7 @@ LOAD SECTION
     color: #43ACF8;
 }
 
-#resultado {
+#result {
     font-family: Fira Sans;
     font-size: 30px;
     font-weight: 400;
@@ -414,7 +423,7 @@ LOAD SECTION
     color: #0A2864;
 }
 
-#resultado span {
+#result span {
     font-family: Fira Sans;
     font-size: 30px;
     font-style: italic;
@@ -423,19 +432,16 @@ LOAD SECTION
     color: #0A2864;
 }
 
-#error {
-    color: red;
-    font-size: 10px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.ultimo-calculo {
+.last-calculation {
     text-align: center;
     margin-top: 20px;
 }
 
-#verUltimoCalculo {
+#button-calculate img {
+    width: 70%;
+}
+
+#seeLastCalculation {
     font-family: Fira Sans;
     font-size: 14px;
     font-weight: 400;
@@ -443,6 +449,21 @@ LOAD SECTION
     color: #0071BC;
     text-decoration: underline;
     cursor: pointer;
+}
+
+#button-contract {
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.2px;
+    text-align: center;
+    padding: 12px 135px;
+    color: #FFFFFF;
+    background-color: #0071BC;
+    border-radius: 6px;
+    border-color: #0071BC;
+    cursor: pointer;
+    margin-top: 30px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -654,6 +675,67 @@ MOBILE SECTION
         line-height: 20px;
     }  
 }  
+
+
+/* =================================================================================================================================
+TESTIMONIALS
+================================================================================================================================= */
+#testimonials-section {
+    margin: 0px 65px 100px 65px;
+}
+
+#testimonials-section h3 {
+    font-family: Fira Sans;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 72px;
+    text-align: center;
+    color: #0A2864;
+    margin-bottom: 60px;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 60px;
+}
+
+.testimonial {
+    background: linear-gradient(87.77deg, #0071BC 0%, #3FA9F5 100%);
+    color: white;
+    padding: 60px 33px 80px 33px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Fira Sans';
+    line-height: 1.4;
+}
+
+.testimonial div p  strong {
+    color: #0A2864;
+}
+
+.testimonial div p.name {
+    font-size: 20px;
+}
+
+.testimonial div p {
+    padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .testimonials-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #testimonials-section h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
 
 /* =================================================================================================================================
 FOOTER
