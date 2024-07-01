@@ -229,21 +229,19 @@ HERO SECTION
 }
 
 @media only screen and (max-width: 768px) {
-    .hero-section {
-        height: 90vh;
-    }
+    .hero-section__text h1 {
+        font-size: 45px;
+        line-height: normal;
+        margin-top: 60px;
+    }    
 
     .hero-section-container {
        padding: 155px 56px;
     }
 
-    .hero-section__text h1 {
-        margin-bottom: 30px;
-        margin-top: 60px;
-    }
-
     .hero-section__text h2 {
-        font-size: 30px;
+        font-size: 19px;
+        line-height: normal;
     }
 }
 
@@ -497,6 +495,10 @@ div:has(button#button-calculate) {
     .load-section-container form .input-range label {
         font-size: 18px;
     }    
+
+    #result {
+        font-size: 20px;
+    }
 }  
 
 /* =================================================================================================================================
@@ -608,6 +610,10 @@ MOBILE SECTION
     padding: 100px 212px;
 }
 
+.mobile-section__img {
+    text-align: center;
+}
+
 .mobile-section__img img {
     max-width: 431px;
 }
@@ -675,7 +681,6 @@ MOBILE SECTION
         line-height: 20px;
     }  
 }  
-
 
 /* =================================================================================================================================
 TESTIMONIALS
