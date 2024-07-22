@@ -82,13 +82,13 @@
                 <h3><span>Calcula</span> tu préstamo</h3>
                 <form>
                     <div>
-                        <input type="text" id="Name" name="Name" placeholder="Nombres" />
+                        <input type="text" id="Name" name="Name" placeholder="Nombres" required/>
                     </div>
                     <div>
-                        <input type="text" id="Surname" name="Surname" placeholder="Apellidos" />
+                        <input type="text" id="Surname" name="Surname" placeholder="Apellidos" required/>
                     </div>
                     <div>
-                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
+                        <input type="email" id="email" name="email" placeholder="Correo electrónico" required/>
                     </div>
                     <div class="ranges">
                         <div class="input-range">
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                     <div>
-                        <button id="button-calculate" type="button" onclick="validateData()">CALCULAR PRÉSTAMO</button>
+                        <button id="button-calculate" type="button">CALCULAR PRÉSTAMO</button>
                     </div>
                     <div class="last-calculation" >
                         <span id="seeLastCalculation">Haga clic aquí para ver su último préstamo calculado.</span>

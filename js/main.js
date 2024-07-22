@@ -2,17 +2,17 @@
 const toggle = document.getElementById("toggle")
 const sidebar = document.getElementById("sidebar")
 
-document.onclick = function (e) {
+document.addEventListener("click", function (e) {
     if (e.target.id !== "sidebar" && e.target.id !== "toggle") {
         toggle.classList.remove("active")
         sidebar.classList.remove("active")
     }
-}
+})
 
-toggle.onclick = function () {
+toggle.addEventListener("click", function () {
     toggle.classList.toggle("active")
     sidebar.classList.toggle("active")
-}
+})
 
 // FUNCTIONS VALIDATE PERSONAL DATA AND CALCULATE LOAN 
 const spanCalculation = document.querySelector("#seeLastCalculation span")
@@ -46,51 +46,19 @@ function showAlert(message, icon) {
 }
 
 function validateData() {
-    userData.name = document.getElementById("Name").value
-    userData.surname = document.getElementById("Surname").value
-    userData.emailAddress = document.getElementById("email").value
+    const name = document.getElementById("Name").value
+    const surname = document.getElementById("Surname").value
+    const emailAddress = document.getElementById("email").value
     const amountWithCurrency = document.getElementById("amount").value
-    userData.amount = parseFloat(amountWithCurrency.slice(2))
-    userData.months = document.getElementById("months").value
+    const amount = parseFloat(amountWithCurrency.slice(2))
+    const months = document.getElementById("months").value
 
-    const nameOk = checkName(userData.name)
-    const surnameOk = checkSurname(userData.surname)
-    const emailAddressOk = checkEmailAddress(userData.emailAddress)
-
-    if (nameOk && surnameOk && emailAddressOk && userData.amount && userData.months) {
-        showResult(userData.amount, userData.months)
-    } else if (!nameOk && !surnameOk && !emailAddressOk && !userData.amount && !userData.months){
-        showAlert("Ingrese los datos solicitados para calcular su préstamo.", "warning")
+    if (name && surname && emailAddress && amount && months) {
+        showResult(amount, months)
     } else {
-        if (!nameOk) {
-            showAlert("Ingrese un nombre válido.", "warning")
-        }
-        if (!surnameOk) {
-            showAlert("Ingrese un apellido válido.", "warning")
-        }
-        if (!emailAddressOk) {
-            showAlert("Ingrese un correo electronico válido.", "warning")
-        }
-        if (!userData.amount || !userData.months ) {
-            showAlert("Ingrese los valores correctamente.", "warning")
-        }
-    }
+        showAlert("Ingrese todos los datos solicitados para calcular su préstamo.", "warning")
+    } 
 }    
-
-function checkName(name) {
-    const regexName = /^[a-zA-Z\s]+$/
-    return regexName.test(name)
-}
-
-function checkSurname(surname) {
-    const regexSurname = /^[a-zA-Z\s]+$/
-    return regexSurname.test(surname)
-}
-
-function checkEmailAddress(emailAddress) {
-    const regexEmailAddress = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    return regexEmailAddress.test(emailAddress)
-}
 
 function calculateLoan(amount, months) {
     if (amount && months) {
@@ -194,15 +162,6 @@ function uploadTestimonials(testimonials) {
     }
 }
 
-// function getTestimonials() {
-//     fetch(URLtestimonials)
-//     .then((response) => response.json())
-//     .then((data) => uploadTestimonials(data))
-//     .catch((error) => {
-//         console.error("Error al cargar los testimonios", error);
-//     })
-// }
-
 async function getTestimonials() {
     try {
         const response = await fetch(URLtestimonials)
@@ -217,3 +176,5 @@ async function getTestimonials() {
 }
 
 getTestimonials()
+
+buttonCalculate.addEventListener("click", validateData);
